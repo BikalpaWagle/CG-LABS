@@ -1,0 +1,95 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>3D Transformation</title>
+      <style>
+        body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background-image: url("https://wallpapercave.com/uwp/uwp4977528.jpeg");
+          background-size: cover;
+        }
+        h1 {
+          color: white;
+          font-size: 60px;
+          text-transform: uppercase;
+        }
+        .keyframes-demo {
+          width: 100px;
+          height: 100px;
+          background: #f29ad8;
+          position: relative;
+          animation: mymove 5s infinite;
+        }
+
+        /* @keyframes mymove {
+          from {
+            top: 0px;
+          }
+          to {
+            top: 300px;
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) translate(100px);
+          }
+        } */
+        @keyframes mymove {
+          0% {
+            top: 0px;
+            transform: rotateX(180deg) rotateY(270deg) rotateZ(360deg) translate(100px)
+          }
+          25% {
+            top: 200px;
+            transform: rotateX(50deg) rotateY(60deg) rotateZ(90deg) translate(200px)
+          }
+          75% {
+            top: 50px;
+            transform: rotateX(360deg) rotateY(180deg) rotateZ(270deg) translate(300px)
+          }
+          100% {
+            top: 100px;
+            transform: rotateX(360deg) rotateY(60deg) rotateZ(180deg) translate(400px)
+          }
+        }
+
+        .container {
+          perspective: -800px;
+        }
+
+        .object {
+          width: 300px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          background-color: #e305ad;
+          transform-style: preserve-3d;
+          animation: rotateAnimation 5s infinite linear;
+        }
+
+        /* @keyframes rotateAnimation {
+          0% {
+            transform: rotateX(0) rotateY(0) rotateZ(0) translateZ(0);
+          }
+          100% {
+            transform: rotateX(360deg) 
+          }
+        } */
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="keyframes-demo">
+          <img src="https://www.shutterstock.com/image-photo/ace-spades-playing-card-isolated-600nw-2673590885.jpg" alt="">
+      </div>
+        <h1>3D Transformation</h1>
+        <!-- <div class="object">
+          <marquee>
+            <h1>HELLO WORLD II</h1>
+          </marquee>
+        </div> -->
+      </div>
+    </body>
+  </html>
